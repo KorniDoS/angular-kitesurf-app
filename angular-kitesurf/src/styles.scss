@@ -1,0 +1,207 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+$font-size: 16px;
+$w-100: 100%;
+$h-100vh: 100vh;
+
+$container-sm: 540px;
+$container-md: 740px;
+$container-lg: 960px;
+$container-xlg: 1140px;
+$container-xxlg: 1320px;
+
+$font-family: 'Roboto', sans-serif;
+
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    font-size: $font-size;
+}
+
+body {
+    font-family: $font-family;
+    width: $w-100;
+    min-height: $h-100vh;
+    display: block;
+    text-rendering: optimizeSpeed;
+    line-height: 1.4;
+}
+
+
+
+
+.container {
+    max-width: 100%;
+    padding: 2rem;
+    margin-block: 2rem;
+    margin-inline: auto;
+    /*border: 1px solid red;*/
+
+
+    @media screen and (min-width: 576px) {
+
+        max-width: $container-sm;
+
+    }
+
+    @media screen and (min-width: 768px) {
+
+        max-width: $container-md;
+
+    }
+
+
+    @media screen and (min-width: 992px) {
+
+        max-width: $container-lg;
+
+    }
+
+    @media screen and (min-width: 1200px) {
+
+        max-width: $container-xlg;
+
+    }
+
+    @media screen and (min-width: 1400px) {
+
+        max-width: $container-xxlg;
+
+    }
+}
+
+.d-flex{
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+.d-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.d-flex-start{
+    justify-content: start;
+}
+
+
+.d-flex-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+.flex-spacer {
+    flex: 1 1 auto;
+}
+
+.p-1{
+    padding: 1rem;
+}
+
+.p-2{
+    padding: 2rem;
+}
+.p-3{
+    padding: 3rem;
+
+}
+
+
+.mb-1{
+    margin-block-end: 1rem;
+}
+
+.mb-2{
+    margin-block-end: 2rem;
+}
+
+.mb-3{
+    margin-block-end: 3rem;
+}
+
+.mt-1{
+    margin-block-start: 1rem;
+}
+.mt-2{
+    margin-block-start: 2rem;
+}
+.mt-3{
+    margin-block-start: 3rem;
+}
+
+.gap{
+    gap: .2rem;
+}
+
+.gap-1{
+    gap: 1rem;
+}
+
+.leaflet-popup-content-wrapper{
+    border-radius: unset;
+    width: 202px;
+    min-height: 228px;
+    position: relative;
+  }
+
+
+  .leaflet-popup-content{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    width: 100%;
+    padding: .4rem;
+  }
+
+  .leaflet-popup-tip-container{
+    display: none;
+  }
+
+  .spot-content{
+    padding: 0 .2rem .2rem;
+    align-items: start;
+  }
+
+  .spot-stats, .name_country{
+    p{
+        margin: 0;
+
+    }
+  }
+
+
+  .leaflet-container a.leaflet-popup-close-button {
+	top: 6px;
+	right: 3px;
+	}
+
+    .yellow-marker{
+        width: 60px !important;
+        height: 50px !important;
+    }
+
+    .leaflet-popup-content-wrapper {
+        position: relative;
+        }
+
+        .red-color{
+            color: red;
+        }
+
+    
