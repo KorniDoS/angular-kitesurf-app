@@ -1,0 +1,43 @@
+
+<div class="container d-flex-column">
+
+    <form #signUpForm="ngForm" class="d-flex-column p-2" (ngSubmit)="signUp()">
+        <h1 class="mb-2">Signup form</h1>
+        <div class="align-start">
+            <label  for="username">Username (Name)</label>
+            <input class="mb-1 form-input" type="text" name="username" autocomplete="off" required #username="ngModel" [(ngModel)]="signUpInfo.name">
+            <div class="mb-1" *ngIf="username.invalid && username.touched">
+            <span class="red-color">Please fill in your username.</span>
+            </div>
+        </div>
+        <div class="align-start">
+            <label for="password">Password: </label>
+            <input class="mb-1 form-input" type="password" minlength="4" required #password="ngModel" name="password" [(ngModel)]="signUpInfo.password">
+         
+            <div class="mb-1" *ngIf="password.invalid && password.touched">
+                <span class="red-color">Please enter a valid password.</span>
+                   </div>
+        </div>
+
+        <div class="align-start">
+            <label for="avatar">Avatar URL: </label>
+            <input class="mb-1 form-input" type="text" name="avatar" [(ngModel)]="signUpInfo.avatar">
+        </div>
+
+        <div class="align-start">
+            <label for="email">Email: </label>
+            <input class="mb-1 form-input" type="email" name="email" required #email="ngModel" [(ngModel)]="signUpInfo.email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+            <div class="mb-1" *ngIf="email.invalid && email.touched">
+                <span class="red-color">Please enter a valid email.</span>
+                   </div>
+        </div>
+
+        <div class="mt-1">
+            <button class="login-btn" [disabled]="signUpForm.invalid">Sign up</button>
+        </div>
+
+      
+    </form>
+
+
+</div>

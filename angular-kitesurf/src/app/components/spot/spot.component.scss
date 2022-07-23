@@ -1,0 +1,76 @@
+h1 {
+    font-size: 1rem;
+
+}
+
+h2 {
+    text-transform: uppercase;
+    color: gray;
+    font-size: .7rem;
+    letter-spacing: 1px;
+}
+
+p {
+    color: black;
+}
+
+.name_country {
+    width: 90%;
+}
+
+.country {
+    color: gray;
+}
+
+.stat {
+    margin-block-end: .4rem;
+}
+
+.stat:last-of-type {
+    margin-block-end: 2.7rem;
+}
+
+
+.add-remove-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    user-select: none;
+    cursor: pointer;
+
+    span {
+        color: white;
+        font-weight: 500;
+        padding-block: .5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        white-space: nowrap;
+
+    }
+
+}
+
+
+.yellow-background {
+    background-color: hsl(46, 100%, 45.5%);
+}
+
+
+.yellow-background:hover{
+    background-color: hsl(46, 100%, 40.5%);
+}
+
+.red-background {
+    background-color: hsl(3, 100%, 59.4%);
+}
+
+
+.red-background:hover{
+    background-color: hsl(3, 100%, 54.4%);
+}
+
+.star-image {
+    width: .8125rem;
+    height: .8125rem;
+}

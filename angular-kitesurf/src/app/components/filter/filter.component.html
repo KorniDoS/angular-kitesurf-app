@@ -1,0 +1,27 @@
+<button *ngIf="!isToggled" class="filter-button d-flex-center" (click)="showContainer()">
+    <img src="assets/images/filter.png" alt="filter icon">
+    <span>
+        Filters
+    </span>
+
+</button>
+
+<div *ngIf="isToggled" class="filter-container d-flex-column">
+    <form #filterForm="ngForm" class="d-flex-column" (ngSubmit)="sendFilters($event)">
+
+        <div class="filter mb-1">
+            <label class="filter-label" for="country">Country <button (click)="showContainer()">x</button></label>
+            <input class="filter-inputs" type="text" pattern="[a-zA-Z ]*" name="country" #country="ngModel"
+                placeholder="Ex: Romania" [(ngModel)]="filters.country">
+        </div>
+        <div class="filter mb-2">
+            <label for="wind">Wind Probability</label>
+            <input class="filter-inputs" type="number" maxlength="2" min="0" max="99" name="wind"  #wind="ngModel"
+                placeholder="0" [(ngModel)]="filters.wind">
+        </div>
+
+        <div class="filter-btn-container d-flex-center">
+            <button class="filter-btn" [disabled]="filterForm.invalid">Apply filter</button>
+        </div>
+    </form>
+</div>

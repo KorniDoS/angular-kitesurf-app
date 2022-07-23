@@ -1,0 +1,47 @@
+<div class="table-container">
+
+    <div class="search">
+        <h3 class="locations">Locations</h3>
+        <form class="search-form d-flex-center d-flex-start">
+            <div class="search-img-container d-flex-center">
+                <img src="assets/images/search-line.png" alt="search-icon">
+            </div>
+            <input class="searchTerm" type="text" name="searchTerm" placeholder="Search..." [(ngModel)]="searchTerm"
+                (input)="search(searchTerm)" />
+        </form>
+    </div>
+
+    <table class="spot-table">
+        <thead>
+            <th [tableSort]="tableSpotData" data-order="asc" data-name="name" scope="col" class="headerSortUp">Name</th>
+            <th [tableSort]="tableSpotData" data-order="asc" data-name="country" scope="col" class="headerSortUp">Country</th>
+            <th [tableSort]="tableSpotData" data-order="asc" data-name="lat" scope="col" class="headerSortUp">Latitude</th>
+            <th [tableSort]="tableSpotData" data-order="asc" data-name="long" scope="col" class="headerSortUp">Longitude</th>
+            <th [tableSort]="tableSpotData" data-order="asc" data-name="probability" scope="col" class="headerSortUp">Wind Prob.</th>
+            <th [tableSort]="tableSpotData" data-order="asc" data-name="month" scope="col" class="headerSortUp">When to go</th>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let spot of tableSpotData  | searchFilter: searchTerm" class="spot-{{spot.id}}">
+                <td>
+                    {{spot.name}}
+                </td>
+                <td>
+                    {{spot.country}}
+                </td>
+                <td>
+                    {{spot.lat}}
+                </td>
+                <td>
+                    {{spot.long}}
+                </td>
+                <td>
+                    {{spot.probability}}%
+                </td>
+                <td>
+                    {{spot.month}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,46 @@
+.navbar {
+  width: 100%;
+  min-height: 70px;
+  align-items: center;
+}
+.navbar .avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  -webkit-margin-end: 1rem;
+          margin-inline-end: 1rem;
+  cursor: pointer;
+}
+.navbar .logo {
+  font-family: "Marck Script", cursive;
+  -webkit-margin-start: 1rem;
+          margin-inline-start: 1rem;
+}
+
+.menu {
+  position: relative;
+  z-index: 999999;
+}
+
+.logout {
+  transition: all 0.3s linear;
+  position: absolute;
+  bottom: -45px;
+  right: 17px;
+  background-color: hsl(0deg, 0%, 90.7%);
+  color: red;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  width: 103px;
+  padding-block: 0.5rem;
+  z-index: 9;
+}
+
+.greeting-text {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .greeting-text {
+    display: unset;
+  }
+}/*# sourceMappingURL=navbar.component.css.map */

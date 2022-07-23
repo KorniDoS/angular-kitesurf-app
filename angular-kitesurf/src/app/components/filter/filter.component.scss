@@ -1,0 +1,116 @@
+.filter-container {
+    width: 210px;
+    //min-height: 250px;
+    padding: .5rem;
+    position: absolute;
+    top: 45px;
+    right: 17px;
+    background-color: #EFEFEF;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 999999;
+    font-family: 'Roboto', sans-serif;
+}
+
+.filter-button {
+    appearance: none;
+    border: none;
+    position: absolute;
+    top: 45px;
+    right: 17px;
+    background-color: #EFEFEF;
+    width: 130px;
+    min-height: 40px;
+    z-index: 999999;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: .2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    img {
+        width: 24px;
+        height: 24px;
+    }
+
+
+
+
+}
+
+form {
+    padding: .4rem;
+    width: 100%;
+    height: 100%;
+    align-items: start;
+    justify-content: space-between;
+
+
+    div {
+        width: 100%;
+    }
+
+    label {
+
+        display: block;
+        font-size: .9rem;
+        font-weight: 300;
+    }
+
+    .filter-inputs {
+        border: none;
+        height: 2rem;
+        background: transparent;
+        border-block-end: 2px solid hsl(0, 0%, 84.7%);
+        width: 100%;
+    }
+
+    .filter-inputs:focus {
+        outline: none;
+        border-block-end: 2px solid hsl(211, 100%, 50%);
+    }
+
+    .filter-btn {
+        appearance: none;
+        padding: .6rem 1.1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        outline: none;
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        background-color: white;
+        cursor: pointer;
+    }
+
+    .filter-btn:disabled {
+        background-color: gray;
+        color: white;
+    }
+
+    .filter-label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        button {
+            font-weight: bold;
+            appearance: none;
+            width: 18px;
+            height: 14px;
+            font: 16px/14px Tahoma, Verdana, sans-serif;
+            font-weight: bold;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            color: rgb(195, 195, 195);
+
+            &:hover,
+            &:focus {
+                color: #999;
+            }
+        }
+
+
+    }
+}

@@ -1,0 +1,49 @@
+
+
+<div class="d-flex-column spot-content gap-1" id="{{spotId}}">
+    <div class="name_country">
+    <h1>{{spotName}} 
+        <span>
+            <img class="star-image" [src]="isFavourite ? 'assets/images/star-on.png' : 'assets/images/star-off.png'" alt="favourite">
+        </span>
+    </h1>
+    <p class="country">{{spotCountry}}</p>
+    </div>
+
+    <div class="spot-stats">
+        <div class="stat">
+    <h2>Wind probability</h2>
+    <p>{{spotWind}} %</p>
+    </div>
+    <div class="stat">
+    <h2>Latitude</h2>
+    <p>{{spotLat}}° 
+        <span *ngIf="castToNumber(spotLat) > 0">N</span>
+        <span *ngIf="castToNumber(spotLat) < 0">S</span>  
+    </p>
+    </div>
+    <div class="stat">
+    <h2>Longitude</h2>
+    <p>{{spotLong}}° 
+        <span *ngIf="castToNumber(spotLong) > 0">E</span>
+        <span *ngIf="castToNumber(spotLong) < 0">W</span>  
+    </p>
+</div>
+<div class="stat">
+    <h2>When to go</h2>
+    <p>{{spotMonth}}</p>
+</div>
+    </div>
+
+    <div class="add-remove-container" [ngClass]="{'red-background': isFavourite, 'yellow-background' : !isFavourite}">
+        <div class="d-flex-center red-background" *ngIf="isFavourite === true" (click)="removeSpotFromFavourites(spotId)">
+            <span>- Remove from favourites</span>
+        </div>
+
+        <div class="d-flex-center yellow-background" *ngIf="isFavourite === false" (click)="addSpotToFavourites()">
+            <span>+ Add to favourites</span>
+        </div>
+    </div>
+    
+</div>
+

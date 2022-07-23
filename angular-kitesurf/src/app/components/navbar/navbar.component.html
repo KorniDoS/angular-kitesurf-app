@@ -1,0 +1,10 @@
+<header class="navbar d-flex justify-between">
+    <h1 class="logo">Kite</h1>
+    <div class="greeting-text" *ngIf="userData">Welcome, {{userData?.name}}</div>
+    <div class="menu" (click)="logOutMenuPopup()">
+        <img id="user-{{userData?.id}}" [src]="userData?.avatar" class="avatar" [alt]="userData ? userData?.name : 'user avatar'">
+        <div [routerLink]="['/login']" *ngIf="avatarToggle" class="logout">
+            <span class="d-flex-center gap"><img src="assets/images/login-box-line.png">Logout</span>
+        </div>
+    </div>
+</header>

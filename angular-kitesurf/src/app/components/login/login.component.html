@@ -1,0 +1,31 @@
+<div class="container d-flex-column">
+
+    <form #loginForm="ngForm" class="d-flex-column p-2" (ngSubmit)="onSubmit()">
+        <h1 class="mb-2">Kite</h1>
+        <div class="align-start">
+            <label  for="username">Username</label>
+            <input class="mb-1 form-input" type="text" name="username" autocomplete="off" required #username="ngModel" [(ngModel)]="loginInfo.username">
+            <div class="mb-1" *ngIf="username.invalid && username.touched">
+            <span class="red-color">Please enter your username.</span>
+            </div>
+        </div>
+        <div class="align-start">
+            <label for="password">Password</label>
+            <input class="mb-1 form-input" type="password" min-length="2" required #password="ngModel" name="password" [(ngModel)]="loginInfo.password">
+         
+            <div class="mb-1" *ngIf="password.invalid && password.touched">
+                <span class="red-color">Please enter a valid password.</span>
+                   </div>
+        </div>
+
+        <div class="mt-1">
+            <button class="login-btn" [disabled]="loginForm.invalid">Login</button>
+        </div>
+
+        <div class="mt-1">
+            <a class="sign-up" [routerLink]="['/signup']">Sign up</a>
+        </div>
+    </form>
+
+
+</div>

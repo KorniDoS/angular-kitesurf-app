@@ -1,0 +1,5 @@
+<app-navbar [userData]="serverUserData"></app-navbar>
+<ng-container *ngIf="showDashboard">
+<app-map [allSpots]="spotData" [favSpots]="favouriteSpotData"></app-map>
+<app-spot-table [tableSpotData]="spotData" [favouriteSpotData]="favouriteSpotData"></app-spot-table>
+</ng-container>

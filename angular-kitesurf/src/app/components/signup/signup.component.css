@@ -1,0 +1,58 @@
+h1 {
+  font-family: "Marck Script";
+  font-size: 3rem;
+}
+
+.container {
+  height: 100vh;
+  margin-block: 0;
+}
+
+label {
+  display: block;
+}
+
+form {
+  min-width: 18.75rem;
+}
+
+.login-btn {
+  font-size: 1.2rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  padding: 0.5rem 2.5rem;
+  color: white;
+  background-color: hsl(212deg, 72.4%, 58.8%);
+}
+
+.login-btn:hover,
+.login-btn:focus {
+  cursor: pointer;
+  background-color: hsl(212deg, 60%, 50%);
+}
+
+.login-btn:disabled {
+  background-color: hsl(212deg, 60%, 70%);
+}
+
+.form-input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100%;
+  border: none;
+  border: 1px solid gray;
+  height: 1.6rem;
+}
+
+.align-start {
+  width: 100%;
+  align-self: start;
+}
+
+.sign-up:link, .sign-up:visited {
+  color: hsl(212deg, 60%, 50%);
+}/*# sourceMappingURL=signup.component.css.map */
